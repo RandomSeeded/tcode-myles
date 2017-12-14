@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`decode bulk string 1`] = `
+Array [
+  "bar",
+  7,
+]
+`;
+
+exports[`decode null 1`] = `
+Array [
+  null,
+  2,
+]
+`;
+
+exports[`decode simple string 1`] = `
+Array [
+  "+foo",
+  5,
+]
+`;
+
+exports[`decode stream 1`] = `
+Array [
+  "+foo",
+  "+bar",
+  null,
+]
+`;
+
+exports[`empty string encoded as simple string 1`] = `
+"+
+"
+`;
+
+exports[`presence of newline switches to bulk string encoding 1`] = `
+"$4
+foo
+
+"
+`;
+
+exports[`strings without newlines encoded as simple strings 1`] = `
+"+foo
+"
+`;

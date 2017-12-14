@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "dependencies": {
+    "@std/esm": "^0.18.0",
+    "jest": "*"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
