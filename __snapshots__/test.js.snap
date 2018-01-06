@@ -29,6 +29,25 @@ Array [
 ]
 `;
 
+exports[`decoding an array with multiple elements works 1`] = `
+Array [
+  Array [
+    null,
+    null,
+  ],
+  4,
+]
+`;
+
+exports[`decoding an array with type null works 1`] = `
+Array [
+  Array [
+    null,
+  ],
+  2,
+]
+`;
+
 exports[`empty string encoded as simple string 1`] = `
 "+
 "
@@ -49,4 +68,20 @@ foo
 exports[`strings without newlines encoded as simple strings 1`] = `
 "+foo
 "
+`;
+
+exports[`we can both encode and decode 1`] = `
+"+abcd
+~
++efgh
+"
+`;
+
+exports[`we can both encode and decode 2`] = `
+Array [
+  Array [
+    null,
+  ],
+  14,
+]
 `;
