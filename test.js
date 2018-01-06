@@ -1,5 +1,4 @@
-require = require('@std/esm')(module);
-const { encode, decode } = require('./index.mjs');
+import { encode, decode } from './index'
 
 test('strings without newlines encoded as simple strings', () => {
   expect(encode('foo')).toMatchSnapshot();
