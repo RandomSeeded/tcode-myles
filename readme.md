@@ -1,5 +1,4 @@
-the tcode format is specified in terms of byte strings.
-but this implementation only supports the subset of byte strings that are js strings.
+"officially" the tcode format is specified in terms of byte strings. but this implementation only supports the subset of byte strings that are js strings.
 
 api:
 
