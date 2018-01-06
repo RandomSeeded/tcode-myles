@@ -10,20 +10,20 @@ export default function(x, offset = 0) {
     case '+': {
       const end = x.indexOf('\n', offset);
       if (end === -1) throw new Error('simple string not terminated');
-      return [x.substring(offset, end), end + 1];
+      return [x.substring(offset+1, end), end + 1];
     }
     case '$': {
       const lengthEnd = x.indexOf('\n', offset);
       if (lengthEnd === -1)
         throw new Error('bulk string length not terminated');
-      const lengthStr = x.substring(offset, lengthEnd);
+      const lengthStr = x.substring(offset+1, lengthEnd);
       if (!/\d+/.test(lengthEnd))
         throw new Error(
           `invalid length value at offset ${offset}: ${lengthStr}`
         );
       const length = parseInt(lengthStr, 10);
       offset = lengthEnd + 1;
-      const end = x.indexOf('\n', offset);
+      const end = offset + length;
       if (end === -1) throw new Error('bulk string not terminated');
       return [x.substring(offset, end), end + 1];
     }
