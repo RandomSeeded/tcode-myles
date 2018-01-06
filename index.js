@@ -1,3 +1,4 @@
 import decode from './decode';
 import encode from './encode';
-export { decode, encode };
+import stream from './stream';
+export { decode, encode, stream };

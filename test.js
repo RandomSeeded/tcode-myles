@@ -1,4 +1,8 @@
-import { encode, decode } from './index'
+import { encode, decode, stream } from './index'
+
+test('encoding an array of null returns expected value', () => {
+  expect(stream.streamEncode([null])).toMatchSnapshot();
+});
 
 test('strings without newlines encoded as simple strings', () => {
   expect(encode('foo')).toMatchSnapshot();
