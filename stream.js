@@ -5,9 +5,6 @@ import decode from './decode';
 
 const _ = require('lodash');
 
-// stream.encode = function(iterable) {} -> js string representing that array
-// stream.decode = function(tcode: string, offset: int = 0, maxNumOfThingsToPull): [[values,go,here], nextOffset] {}
-
 function streamEncode(thingsToEncode) {
   return _.map(thingsToEncode, encode).join('');
 }
@@ -29,34 +26,6 @@ function streamDecode(stringToDecode, offsetBytes, numberOfElementsToPull) {
     numElementsDecoded += 1;
   }
   return [outputBuffer, currentOffset];
-  // const outputBuffer = [];
-  // let currentOffset = offsetBytes;
-  // while (_.size(outputBuffer) < numberOfElementsToPull && currentOffset < stringToDecode.length) {
-  //   // decode
-  //   const type = stringToDecode[currentOffset];
-  //   switch (type) {
-  //     case TYPE_NULL: {
-  //       outputBuffer.push(null);
-  //       currentOffset += 2;
-  //       break;
-  //     }
-  //     case TYPE_SIMPLE: {
-  //       const end = _.indexOf(stringToDecode, '\n', currentOffset);
-  //       const encodedSimpleString = stringToDecode.substring(currentOffset, end + 1);
-  //       const decodedSimpleString = decode(encodedSimpleString);
-  //       console.log('decodedSimpleString', decodedSimpleString);
-  //       currentOffset = end + 1;
-  //       outputBuffer.push(decode(_.first(decodedSimpleString)));
-  //       break;
-  //     }
-  //     case TYPE_BULK: {
-  //       break;
-  //     }
-  //     default:
-  //       throw new Error('fill this in properly later');
-  //   }
-  // }
-  // return [outputBuffer, currentOffset];
 }
 
 module.exports = {

@@ -33,14 +33,14 @@ Typecodes:
 
 TODAY:
 
-###Streaming###
+### Streaming
 
 stream.encode = function(iterable) {} -> js string representing that array
 stream.decode = function(tcode: string, offset: int = 0, maxNumOfThingsToPull): [[values,go,here], nextOffset] {}
 
 (also think about how you're going to determine simple string vs bulk string)
 
-###Packing###
+### Packing
 
 whatever.int.pack -> int to encoded
 whatever.int.unpack -> encoded to js int
