@@ -1,4 +1,20 @@
-import { encode, decode, stream } from './index'
+import { encode, decode, stream, int, pack } from './index'
+
+test('packing encode works', () => {
+  expect(pack.encode([['int', 'int'], [1, 2]])).toMatchSnapshot();
+});
+
+test('packing decode works', () => {
+  expect(pack.decode([['int', 'int'], ['1', '2']])).toMatchSnapshot();
+});
+
+test('packing an int returns them encoded', () => {
+  expect(int.pack(32)).toMatchSnapshot();
+});
+
+test('unpacking an int works', () => {
+  expect(int.unpack("32")).toMatchSnapshot();
+});
 
 test('encoding an array of null returns expected value', () => {
   expect(stream.streamEncode([null])).toMatchSnapshot();

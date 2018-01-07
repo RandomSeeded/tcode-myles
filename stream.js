@@ -9,10 +9,6 @@ function streamEncode(thingsToEncode) {
   return _.map(thingsToEncode, encode).join('');
 }
 
-const TYPE_NULL = '~';
-const TYPE_SIMPLE = '+';
-const TYPE_BULK = '$';
-
 function streamDecode(stringToDecode, offsetBytes, numberOfElementsToPull) {
   // const subsetWeCareAbout = stringToDecode.substr(offsetBytes);
   // start mapping at the offset actually

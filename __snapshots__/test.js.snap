@@ -24,6 +24,24 @@ exports[`encoding an array of null returns expected value 1`] = `
 "
 `;
 
+exports[`packing an int returns them encoded 1`] = `"32"`;
+
+exports[`packing decode works 1`] = `
+Array [
+  1,
+  2,
+]
+`;
+
+exports[`packing encode works 1`] = `
+Array [
+  "1",
+  "2",
+]
+`;
+
+exports[`unpacking an int works 1`] = `32`;
+
 exports[`we can both encode and decode 1`] = `
 "+abcd
 ~

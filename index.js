@@ -1,3 +1,5 @@
 export {default as decode} from './decode'
 export {default as encode} from './encode'
 export {default as stream} from './stream'
+export {default as pack} from './pack'
+export {default as int} from './int'
