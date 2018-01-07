@@ -1,4 +1,3 @@
-import decode from './decode';
-import encode from './encode';
-import stream from './stream';
-export { decode, encode, stream };
+export {default as decode} from './decode'
+export {default as encode} from './encode'
+export {default as stream} from './stream'
